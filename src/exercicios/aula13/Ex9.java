@@ -7,17 +7,17 @@ package exercicios.aula13;
 
 import java.util.Scanner;
 
-public class Ex3 {
-    public static void main(String [] args){
-        
+public class Ex9 {
+
+    public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         
-        System.out.println("Informe o primeiro número");
-        int num1 = scan.nextInt();
         
-        System.out.println("Informe o segundo número");
-        int num2 = scan.nextInt();
+        System.out.println("Informe a temperatura em Farenheit");
+        int f = scan.nextInt();
         
-        System.out.println("A soma é: "+ (num1 + num2));
+        int c = (5 * (f -32 )/9);
+        
+        System.out.println(f + " Fahrenheit"+ " em celsius é: " +c + " graus");
     }
 }

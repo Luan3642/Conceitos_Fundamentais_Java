@@ -5,19 +5,20 @@
  */
 package exercicios.aula13;
 
+
 import java.util.Scanner;
 
-public class Ex3 {
-    public static void main(String [] args){
-        
+public class Ex10 {
+    public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         
-        System.out.println("Informe o primeiro número");
-        int num1 = scan.nextInt();
+        System.out.println("Informe a temperatura em graus celsius");
+        int c = scan.nextInt();
         
-        System.out.println("Informe o segundo número");
-        int num2 = scan.nextInt();
+        int conversao = (c * 9/5) + 32;
         
-        System.out.println("A soma é: "+ (num1 + num2));
+        System.out.println(+c + " graus celsius, em Fahrenheit é: " +conversao);
+        
+        
     }
 }
