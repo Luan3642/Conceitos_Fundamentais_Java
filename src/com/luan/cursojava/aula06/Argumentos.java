@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Aula06;
+package com.luan.cursojava.aula06;
 
 /**
  *
