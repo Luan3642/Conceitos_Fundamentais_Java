@@ -28,7 +28,7 @@ public class Ex13 {
             calculo = base * expoente * i;
         }
         
-        System.out.println(calculo);
+        System.out.println(calculo);kk
 
         }
 }
