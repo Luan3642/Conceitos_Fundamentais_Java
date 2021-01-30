@@ -21,14 +21,18 @@ public class Ex13 {
         System.out.println("Entre com o expoente");
         int expoente = scan.nextInt();
        
-        int calculo = 0;
+        int calculo = base;
     
+       while(expoente > 1){
+           
+           base = base * calculo;
+           
+           expoente--;
+       }   
+       
+        System.out.println(base);
         
-        for (int i = 1; i <=expoente; i++) {
-            calculo = base * expoente * i;
-        }
         
-        System.out.println(calculo);kk
 
         }
 }
