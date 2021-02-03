@@ -5,16 +5,37 @@
  */
 package exercicios.aula16;
 
-/**
- *
- * @author luan3
- */
+import java.util.Scanner;
+
 public class Ex27 {
+
     public static void main(String[] args) {
-        System.out.println("ola");
-        
-        System.out.println("");
-        
-        System.out.print("olw");
+        Scanner scan = new Scanner(System.in);
+
+        int temperatura = 0;
+        int maior = 0;
+        int menor = Integer.MAX_VALUE;
+        boolean resposta = false;
+
+        do {
+
+            System.out.println("Informe a temperatura");
+            temperatura = scan.nextInt();
+            
+            System.out.println("Deseja continuar");
+            resposta = scan.nextBoolean();
+
+            if (temperatura > maior) {
+                maior = temperatura;
+            }
+
+            if (temperatura < menor) {
+                menor = temperatura;
+            }
+
+        } while (resposta != false);
+
+        System.out.println("A maior temperatura é: " + maior);
+        System.out.println("A menor temperatura é: " + menor);
     }
 }
