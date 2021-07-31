@@ -32,7 +32,7 @@ public class Ex18 {
                 System.out.println("O "+(i+1)+ " aluno, foi aprovado");
                 System.out.println("");
             } else{
-                System.out.println("O "+(i+1)+ " aluno, foi reprovado");
+                System.out.println("O "+(i+1)+ " aluno., foi reprovado");
                 System.out.println("");
             }
             
