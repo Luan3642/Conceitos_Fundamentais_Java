@@ -8,17 +8,17 @@ package exercicios.aula19;
 import java.util.Random;
 public class Ex11 {
     public static void main(String[] args) {
-        
         Random rd = new Random();
-        int[] vetorA = new int[10];
-        int pares = 0;
         
-        for (int i = 0; i < 10; i++) {
+        int[] vetorA = new int[10];
+        int qtdePar = 0;
+        
+        
+        System.out.println("Valor vetorA");
+        for (int i = 0; i <vetorA.length; i++) {
             vetorA[i] = rd.nextInt(20);
-            
-            if(vetorA[i] % 2 == 0){
-                pares++;
-            }
+            if(vetorA[i] % 2 == 0)
+                qtdePar++;
         }
         
         for (int i : vetorA) {
@@ -26,10 +26,8 @@ public class Ex11 {
         }
         
         System.out.println("");
-        System.out.println("Quantidade de elementos pares: "+pares);
         
-        
-        
+        System.out.println("Quantidade de valores par: "+ qtdePar);
         
     }
 }
