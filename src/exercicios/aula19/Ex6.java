@@ -8,47 +8,35 @@ package exercicios.aula19;
 import java.util.Random;
 
 public class Ex6 {
-    public static void main(String[] args) {
-        
+
+    public static void vetores() {
+
         Random rd = new Random();
-        
         int[] vetorA = new int[10];
-        
         int[] vetorB = new int[vetorA.length];
-        
+
         int[] vetorC = new int[vetorA.length];
-        
-        
-        for (int i = 0; i <vetorA.length; i++) {
-            vetorA[i] = rd.nextInt(20);
+
+        for (int i = 0; i < vetorA.length; i++) {
+            vetorA[i] = rd.nextInt(10);
         }
-        
-        for (int i = 0; i <vetorB.length; i++) {
-            vetorB[i] = rd.nextInt(20);
+
+        for (int i = 0; i < vetorB.length; i++) {
+            vetorB[i] = rd.nextInt(10);
         }
-        
-        
-        for (int i = 0; i <vetorC.length; i++) {
+
+        for (int i = 0; i < 10; i++) {
             vetorC[i] = vetorA[i] + vetorB[i];
         }
-        
-        System.out.println("");
-        System.out.println("VETOR A");
-        for(int i : vetorA ){
+
+        System.out.println("Valor vetorC");
+
+        for (int i : vetorC) {
             System.out.println(i);
         }
-        
-        System.out.println("");
-        System.out.println("VETOR B");
-        for (int j : vetorB) {
-            System.out.println(j);
-        }
-        
-        System.out.println("");
-        System.out.println("VETOR C");
-        for (int k : vetorC) {
-            System.out.println(k);
-        }
-        
+    }
+
+    public static void main(String[] args) {
+        vetores();
     }
 }
