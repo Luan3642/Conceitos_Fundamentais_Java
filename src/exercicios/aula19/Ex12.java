@@ -7,30 +7,25 @@ package exercicios.aula19;
 
 import java.util.Random;
 
-/**
- *
- * @author luan3
- */
 public class Ex12 {
+
     public static void main(String[] args) {
-        
-        int soma = 0;
         Random rd = new Random();
+
+        int soma = 0;
         int[] vetorA = new int[10];
-        
-        for (int i = 0; i <vetorA.length; i++) {
-            vetorA[i] = rd.nextInt(20);
-            soma += vetorA[i];
-            
+
+        System.out.println("Valor vetorA");
+        for (int i = 0; i < vetorA.length; i++) {
+            vetorA[i] = rd.nextInt(5);
+            soma = soma + vetorA[i];
         }
-        
+
         for (int i : vetorA) {
             System.out.println(i);
         }
         
-        System.out.println("");
-        System.out.println("A soma é: " +soma);
-        
-        
+        System.out.println("Soma: "+soma);
+
     }
 }
