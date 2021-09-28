@@ -12,7 +12,7 @@ public class Ex2 {
     public static void vetores() {
 
         Random rd = new Random();
-
+        //
         int[] vetorA = new int[8];
         int[] vetorB = new int[vetorA.length];
 
