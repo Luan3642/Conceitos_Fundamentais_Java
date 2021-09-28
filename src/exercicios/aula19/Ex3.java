@@ -7,38 +7,37 @@ package exercicios.aula19;
 
 import java.util.Random;
 
-
-
 public class Ex3 {
-    public static void main(String[] args) {
+
+    public static void vetores() {
+
         Random rd = new Random();
-        
+
         int[] vetorA = new int[15];
-        
         int[] vetorB = new int[vetorA.length];
-        
-        for (int i = 0; i <vetorA.length; i++) {
-            vetorA[i] = rd.nextInt(10);
+
+        for (int s = 0; s < vetorA.length; s++) {
+            vetorA[s] = rd.nextInt(10);
         }
-        
-        for (int i = 0; i <vetorB.length; i++) {
-            vetorB[i] = vetorA[i] * vetorA[i];
-        }
-        
-        System.out.println("");
-        System.out.println("Valor do vetor A");
-      
-        for(int i : vetorA){
+
+        System.out.println("Vetor A");
+
+        for (int i : vetorA) {
             System.out.println(i);
         }
-        
-        System.out.println("");
-        System.out.println("Valor do vetor B ");
-        
-        for(int j : vetorB){
-            System.out.println(j);
+
+        for (int i = 0; i < 10; i++) {
+            vetorB[i] = (int) Math.pow(vetorA[i], 2);
         }
-        
-        
+
+        System.out.println("");
+
+        for (int i : vetorB) {
+            System.out.println(i);
+        }
+    }
+
+    public static void main(String[] args) {
+        vetores();
     }
 }
