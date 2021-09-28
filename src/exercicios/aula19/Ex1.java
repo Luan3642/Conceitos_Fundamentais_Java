@@ -6,42 +6,31 @@
 package exercicios.aula19;
 
 
-import java.util.Scanner;
-
 public class Ex1 {
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        
-        int[] vetorA = new int[5];
-        
-        int[] vetorB = new int[vetorA.length];
-        
-        for (int i = 0; i <vetorA.length; i++) {
-            System.out.println("Informe os valores do vetor A, POSIÇÃO: "+i);
-            vetorA[i] = scan.nextInt();
+    public static void vetores() {
 
-            
-        }
-        
-        
-        for (int i = 0; i <vetorB.length; i++) {
+        int[] vetorA = new int[5];
+        int[] vetorB = new int[vetorA.length];
+
+        vetorA[0] = 0;
+        vetorA[1] = 1;
+        vetorA[2] = 2;
+        vetorA[3] = 3;
+        vetorA[4] = 4;
+
+        for (int i : vetorA) {
             vetorB[i] = vetorA[i];
         }
-        
-        System.out.println("Valor do vetor A");
-        
-        for(int i : vetorA){
+
+        System.out.println("Valores do vetor B");
+
+        for (int i : vetorB) {
             System.out.println(i);
         }
-        
-        
-        System.out.println("");
-        
-        
-        System.out.println("Valor do vetor B");
-        
-        for(int j : vetorB){
-            System.out.println(j);
-        }
+
+
+    }
+    public static void main(String[] args) {
+        vetores();
     }
 }
