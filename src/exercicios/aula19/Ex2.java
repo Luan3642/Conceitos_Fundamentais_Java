@@ -41,7 +41,7 @@ public class Ex2 {
         for (int b : vetorB) {
             System.out.println(b);
         }
-//////
+//////////
     }
 
     public static void main(String[] args) {
