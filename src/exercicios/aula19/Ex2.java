@@ -7,17 +7,11 @@ package exercicios.aula19;
 
 import java.util.Random;
 
-/**
- *
- * @author luan3
- */
 public class Ex2 {
 
-    public static void main(String[] args) {
+    public static void vetores() {
 
         Random rd = new Random();
-
-        System.out.println(rd.nextInt(10));
 
         int[] vetorA = new int[8];
         int[] vetorB = new int[vetorA.length];
@@ -26,24 +20,28 @@ public class Ex2 {
             vetorA[i] = rd.nextInt(10);
         }
 
-        for (int i = 0; i < vetorB.length; i++) {
-            vetorB[i] = vetorA[i] * 2;
+        System.out.println("");
+
+        System.out.println("Valores vetorA");
+
+        for (int y : vetorA) {
+            System.out.println(y);
+        }
+
+        for (int v = 0; v < vetorB.length; v++) {
+            vetorB[v] = vetorA[v] * 2;
         }
 
         System.out.println("");
-        System.out.println("Vetor A");
+        System.out.println("Valores vetorB");
 
-        for (int i : vetorA) {
-            System.out.println(i);
+        for (int b : vetorB) {
+            System.out.println(b);
         }
-        
-        
-        System.out.println("");
-        System.out.println("Vetor B ");
-        for(int j : vetorB){
-            System.out.println(j);
-        }
-        
 
+    }
+
+    public static void main(String[] args) {
+        vetores();
     }
 }

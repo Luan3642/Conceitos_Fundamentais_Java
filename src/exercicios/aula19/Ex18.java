@@ -5,37 +5,39 @@
  */
 package exercicios.aula19;
 
+import java.util.Scanner;
 
 import java.util.Scanner;
 
 public class Ex18 {
+
     public static void main(String[] args) {
-        
+
         Scanner scan = new Scanner(System.in);
+
+        int valor1;
+        int valor2;
+
+        int maior = 0;
+        int menor = 0;
+
+        System.out.println("digite primeiro valor");
+        valor1 = scan.nextInt();
+
+        System.out.println("Digite o segundo valor");
+        valor2 = scan.nextInt();
+
+        if (valor1 > valor2) {
+            maior = valor1;
+            menor = valor2;
+        } 
         
-        
-        int[] alunos = new int[10];
-        float[] nota1 = new float[10];
-        float[] nota2 = new float[10];
-        
-        float[] result = new float[10];
-        
-        for (int i = 0; i <alunos.length; i++) {
-            System.out.println("Informe a primeira nota do " + (i+1) + " aluno");
-            nota1[i] = scan.nextFloat();
-            System.out.println("Informe a segunda nota do "+ (i+1)+ " aluno");
-            nota2[i] = scan.nextFloat();
-            
-            result[i] = (nota1[i] + nota2[i]) / 2;
-            
-            if(result[i] > 7){
-                System.out.println("O "+(i+1)+ " aluno, foi aprovado");
-                System.out.println("");
-            } else{
-                System.out.println("O "+(i+1)+ " aluno., foi reprovado");
-                System.out.println("");
-            }
-            
+        if(valor2 > valor1 ){
+            maior = valor2;
+            menor = valor1;
         }
+        System.out.println("maior: "+ maior);
+        System.out.println("Menor: "+menor);
     }
+
 }
