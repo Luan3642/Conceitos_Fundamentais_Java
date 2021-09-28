@@ -5,37 +5,34 @@
  */
 package exercicios.aula19;
 
-
 import java.util.Random;
 import java.util.Scanner;
 
 public class Ex8 {
+
     public static void main(String[] args) {
+        int[] vetorA = new int[10];
+        int[] vetorB = new int[vetorA.length];
+        int[] vetorC = new int[vetorA.length];
+
         Random rd = new Random();
-        
-        int vetorA[] = new int[10];
-        
-        int vetorB[] = new int[vetorA.length];
-        
-        
-        int vetorC[] = new int[vetorA.length];
-        
-        
-        for (int i = 0; i <vetorA.length; i++) {
+
+        for (int i = 0; i < 10; i++) {
             vetorA[i] = rd.nextInt(10);
         }
-        
-        for (int i = 0; i <vetorB.length; i++) {
-            vetorB[i] = rd.nextInt(10);
+
+        for (int i = 0; i < 10; i++) {
+            vetorB[i] = rd.nextInt(20);
         }
-        
-        for (int i = 0; i < vetorC.length; i++) {
+
+        for (int i = 0; i < 10; i++) {
             vetorC[i] = vetorA[i] * vetorB[i];
         }
-        
+
+        System.out.println("valor vetorC");
+
         for (int i : vetorC) {
             System.out.println(i);
         }
-        
     }
 }
