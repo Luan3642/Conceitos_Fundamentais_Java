@@ -6,34 +6,34 @@
 package exercicios.aula19;
 
 import java.util.Random;
+import java.util.Scanner;
 
-/**
- *
- * @author luan3
- */
+
 public class Ex13 {
     public static void main(String[] args) {
         
+        int soma =0;
+        int[] vetorA = new int[10];
         Random rd = new Random();
         
-        int soma = 0;
+        Scanner scan = new Scanner(System.in);
         
-        int[] vetorA = new int[10];
         
         for (int i = 0; i <vetorA.length; i++) {
-            vetorA[i] = rd.nextInt(20);
+            System.out.println("Informe o valor " +i + " do vetor");
+            vetorA[i] = scan.nextInt();
             
-            if(vetorA[i] % 5 == 0){
+            if(vetorA[i] % 5 == 0)
                 soma += vetorA[i];
-            }
         }
-        
+        System.out.println("");
+        System.out.println("Valor do vetorA");
         for (int i : vetorA) {
             System.out.println(i);
         }
         
-        System.out.println("");
         
-        System.out.println("Soma: "+soma);
+        System.out.println("Soma dos multiplos de 5: "+soma);
+        
     }
 }
