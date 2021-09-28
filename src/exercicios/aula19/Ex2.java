@@ -15,6 +15,7 @@ public class Ex2 {
         //
         
         ///
+        //
         int[] vetorA = new int[8];
         int[] vetorB = new int[vetorA.length];
 
