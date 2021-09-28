@@ -13,6 +13,8 @@ public class Ex2 {
 
         Random rd = new Random();
         //
+        
+        ///
         int[] vetorA = new int[8];
         int[] vetorB = new int[vetorA.length];
 
