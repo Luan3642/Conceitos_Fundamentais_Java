@@ -15,16 +15,31 @@ public class Ex22 {
 
     
     public static void main(String[] args) {
-        int numero =0;
-        Integer aux = 0;
-        Scanner scan = new Scanner(System.in);
-        for (int i = 1; i <=5; i++) {
-            System.out.println("Informe um número");
-            numero = scan.nextInt();
-            if (numero > aux){
-                aux = numero;
+        
+        int[] vetorA = new int[10];
+        int zero = 0;
+        
+        for (int i = 0; i <vetorA.length; i++) {
+            vetorA[i] = (int)Math.round(Math.random() * 1);
+            
+            if(vetorA[i] == 0){
+                zero++;
             }
+            
         }
-        System.out.println("Maior: "+aux);
+
+        for (int i : vetorA) {
+            System.out.println(i);
+        }
+        
+        System.out.println("");
+        int one = vetorA.length - zero;
+        
+        int porcentagemOne = (one * 100) / vetorA.length;
+        int porcentagemZero = 100 - porcentagemOne;
+        
+        
+        System.out.println("Números 1: "+ porcentagemOne +"%");
+        System.out.println("Números 0: "+porcentagemZero +"%");
     }
 }
