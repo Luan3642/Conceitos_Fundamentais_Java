@@ -8,20 +8,12 @@ package exercicios.aula19;
 public class Ex20 {
 
     public static void main(String[] args) {
-
-        int paisA = 80000;
-        double paisB = 200000;
-        int cont =0;
+        double[] vetorA = new double[20];
         
-        while(paisA < paisB){
-            
-            paisA = paisA + (paisA/ 100) * 3;
-            paisB = paisB + (paisB/ 100) * 1.5;
-            cont++;
+        for (int i = 0; i <vetorA.length; i++) {
+            vetorA[i] = 5.43;
         }
         
-        System.out.println("Pais A: "+paisA);
-        System.out.println("Anos: "+cont);
     }
 
 }
