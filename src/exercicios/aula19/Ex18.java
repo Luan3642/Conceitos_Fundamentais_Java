@@ -5,6 +5,7 @@
  */
 package exercicios.aula19;
 
+import java.util.Random;
 import java.util.Scanner;
 
 import java.util.Scanner;
@@ -12,32 +13,37 @@ import java.util.Scanner;
 public class Ex18 {
 
     public static void main(String[] args) {
+        int[] vetorA = new int[10];
 
-        Scanner scan = new Scanner(System.in);
+        Random rd = new Random();
 
-        int valor1;
-        int valor2;
+        int menor = Integer.MAX_VALUE;
+        int maior = Integer.MIN_VALUE;
+        int posicaoMenor = 0;
+        int posicaoMaior = 0;
 
-        int maior = 0;
-        int menor = 0;
+        for (int i = 0; i < vetorA.length; i++) {
+            vetorA[i] = rd.nextInt(20);
 
-        System.out.println("digite primeiro valor");
-        valor1 = scan.nextInt();
+            if (vetorA[i] < menor) {
+                menor = vetorA[i];
+                posicaoMenor = i;
+            } else if (vetorA[i] > maior) {
+                maior = vetorA[i];
+                posicaoMaior = i;
+            }
 
-        System.out.println("Digite o segundo valor");
-        valor2 = scan.nextInt();
-
-        if (valor1 > valor2) {
-            maior = valor1;
-            menor = valor2;
-        } 
-        
-        if(valor2 > valor1 ){
-            maior = valor2;
-            menor = valor1;
         }
-        System.out.println("maior: "+ maior);
-        System.out.println("Menor: "+menor);
+
+        for (int i : vetorA) {
+            System.out.println(i);
+        }
+
+        System.out.println("");
+        System.out.println("Menor número: " + menor);
+        System.out.println("Posicao menor: " + posicaoMenor);
+        System.out.println("Maior número: " + maior);
+        System.out.println("Posição maior: "+ posicaoMaior);
     }
 
 }
