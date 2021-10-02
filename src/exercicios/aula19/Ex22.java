@@ -27,6 +27,7 @@ public class Ex22 {
             }
             
         }
+//        
 
         for (int i : vetorA) {
             System.out.println(i);
