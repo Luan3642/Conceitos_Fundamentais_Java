@@ -12,23 +12,27 @@ package exercicios.aula19;
 public class Ex27 {
 
     public static void main(String[] args) {
-        int[] vetorA = {5, 6, 9, 71, 2, 3, 5, 54,5,10};
-        int[] vetorB = {5, 6, 9, 8, 7, 1, 98, 5, 5,10};
-        int[] vetorC = new int[vetorA.length];
-
+        int[] vetorA = {1,69,5,44,8,7,8,97,8,2};
+        char[] vetorB = new char[10];
+        
+        
+        
         for (int i = 0; i <vetorA.length; i++) {
-            if (vetorA[i] > vetorB[i]) {
-                vetorC[i] = 1;
-            } else if (vetorA[i] == vetorB[i]) {
-                vetorC[i] = 0;
-            } else if (vetorA[i] < vetorB[i]) {
-                vetorC[i] = -1;
+            if(vetorA[i] < 7){
+                vetorB[i] = 'a';
+            } else if(vetorA[i] == 7){
+                vetorB[i] = 'b';
+            } else if (vetorA[i] > 7 && vetorA[i] < 10){
+                vetorB[i] = 'c';
+            } else if (vetorA[i] == 10){
+                vetorB[i] = 'd';
+            } else if (vetorA[i] > 10){
+                vetorB[i] = 'e';
             }
         }
         
-        for(int i : vetorC){
-            System.out.println(i);
+        for (char s : vetorB){
+            System.out.println(s);
         }
-
     }
 }
