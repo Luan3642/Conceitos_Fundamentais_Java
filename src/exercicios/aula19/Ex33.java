@@ -20,15 +20,16 @@ public class Ex33 {
         Scanner scan = new Scanner(System.in);
         int[] vetorA = new int[10];
 
-        boolean primo = true;
+        
         for (int i = 0; i < vetorA.length; i++) {
+            boolean primo = true;
             System.out.println("Digite um número");
             vetorA[i] = scan.nextInt();
             
             for (int j = 2; j <vetorA[i]; j++) {
                 if(vetorA[i] % j == 0){
                     primo = false;
-                } 
+                }
             }
             System.out.println(primo);
             
