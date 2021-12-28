@@ -33,6 +33,7 @@ public class MatrizesIrregulares {
             }
         }
 
+        // matrizes 
         for (int i = 0; i < nomeFilhos.length; i++) {
             System.out.println("Pessoa " + i + " tem " + nomeFilhos[i].length + " filhos ");
             for (int j = 0; j < nomeFilhos[i].length; j++) {
