@@ -5,6 +5,8 @@
  */
 package exercicios.aula20;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Luan
@@ -12,13 +14,36 @@ package exercicios.aula20;
 public class Ex3 {
     public static void main(String[] args) {
         
-        int j = 3;
-        int s = 2;
+        int m [][][] = new int[3][3][3];
         
-        if(s == 3 || j == 3){
-            System.out.println("Verdade");
-        } else{
-            System.out.println("false");
+        int par = 0, impar = 0;
+        Scanner scan = new Scanner(System.in);
+        
+        for (int i = 0; i <m.length; i++) {
+            for (int j = 0; j <m[i].length; j++) {
+                for (int k = 0; k <m[j].length; k++) {
+                    System.out.println("Informe os valores" );
+                    m[i][j][k] = scan.nextInt();
+                    
+                    if(m[i][j][k] % 2 == 0){
+                        par++;
+                    } else{
+                        impar++;
+                    }
+                }
+            }
         }
+        
+        for (int i = 0; i <m.length; i++) {
+            for (int j = 0; j <m[i].length; j++) {
+                for (int k = 0; k <m[i][j].length; k++) {
+                    System.out.print(m[i][j][k] + " - ");
+                }
+            }
+            System.out.println("");
+        }
+        
+        System.out.println("Pares: "+par);
+        System.out.println("Impares: "+impar);
     }
 }
