@@ -13,66 +13,43 @@ import java.util.Scanner;
  */
 public class Ex6 {
 
-    public static String[][] compromissos = new String[32][24];
-
-    public void marcaComprimisso(int dia, int horarioCompromisso, String tarefa) {
-
-        compromissos[dia][horarioCompromisso] = tarefa;
-
-    }
-
-    public String pesquisarCompromisso(int diaPesquisa, int horaPesquisa) {
-        int aux = 0;
-        for (int i = 0; i < compromissos.length; i++) {
-            for (int j = 0; j < compromissos[i].length; j++) {
-                if (j == horaPesquisa) {
-                    aux = j;
-                }
-            }
-        }
-        System.out.println("");
-        return ("Tarefa: " + compromissos[diaPesquisa][horaPesquisa] + "\n" + "Horário: " + aux);
-
-    }
-
     public static void main(String[] args) {
-        Ex6 ex6 = new Ex6();
+
+        String[][] jogo = new String[3][3];
 
         Scanner scan = new Scanner(System.in);
+        int auxLinha = 0, auxColuna = 0;
 
-        boolean pergunta = true;
+        System.out.println("Informe o nome do primeiro jogador");
+        String player1 = scan.next();
 
-        while (pergunta != false) {
+        System.out.println("Informe o nome do segundo jogador");
+        String player2 = scan.next();
 
-            System.out.println("Informe o dia do compromisso");
-            int dia = scan.nextInt();
+        for (int i = 0; i < jogo.length; i++) {
+            for (int j = 0; j < jogo[i].length; j++) {
+                System.out.println("");
 
-            System.out.println("Informe o horário do compromisso ");
-            int horario = scan.nextInt();
+                System.out.println("Jogador " + player1 + " , jogue: X ou 0");
+                String jogada = scan.next();
+                System.out.println("Jogador " + player1 + " Informe a posição");
+                int linha = scan.nextInt();
+                int coluna = scan.nextInt();
 
-            System.out.println("Informe a tarefa");
-            String tarefa = scan.next();
+                jogo[linha][coluna] = jogada;
+                System.out.println("");
+                System.out.println("Jogada: " + jogo[linha][coluna]);
+                
+                if (i == linha) {
+                    auxLinha = i;
+                }
+                if (j == coluna) {
+                    auxColuna = j;
+                }
+                System.out.println("Posição jogada: " + auxLinha + auxColuna);
 
-            ex6.marcaComprimisso(dia, horario, tarefa);
-
-            System.out.println("");
-            System.out.println("Deseja cadastrar uma tarefa nova?");
-            pergunta = scan.nextBoolean();
-
-            System.out.println("");
-
+            }
         }
-        System.out.println("Deseja pesquisar um compromisso?");
-        boolean confirmacao = scan.nextBoolean();
-        
-        if(confirmacao == true ){
-            System.out.println("Informe o dia ");
-            int dia = scan.nextInt();
-            
-            System.out.println("Informe o horário");
-            int horario = scan.nextInt();
-            
-            System.out.println(ex6.pesquisarCompromisso(dia, horario));
-        }
+
     }
 }
