@@ -14,9 +14,37 @@ public class Livro {
     private String idioma;
     private int paginas;
     private int isbn;
+    private String nomeLivro;
+    private boolean emprestado;
+    private String nomeDaPessoaEmprestou;
+    
 
     public String getEditora() {
         return editora;
+    }
+
+    public String getNomeLivro() {
+        return nomeLivro;
+    }
+
+    public void setNomeLivro(String nomeLivro) {
+        this.nomeLivro = nomeLivro;
+    }
+
+    public boolean isEmprestado() {
+        return emprestado;
+    }
+
+    public void setEmprestado(boolean emprestado) {
+        this.emprestado = emprestado;
+    }
+
+    public String getNomeDaPessoaEmprestou() {
+        return nomeDaPessoaEmprestou;
+    }
+
+    public void setNomeDaPessoaEmprestou(String nomeDaPessoaEmprestou) {
+        this.nomeDaPessoaEmprestou = nomeDaPessoaEmprestou;
     }
 
     public void setEditora(String editora) {
