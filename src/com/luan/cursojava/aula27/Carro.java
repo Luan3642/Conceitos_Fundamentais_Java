@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.luan.cursojava.aula26;
+package com.luan.cursojava.aula27;
 
 /**
  *
@@ -26,7 +26,7 @@ public class Carro {
         return capCombustivel * consumoCombustivel;
     }
     
-    public double calcularCombustivel(double km){
+       public double calcularCombustivel(double km){
         double qtdCombustivel = km/consumoCombustivel;
         
         return qtdCombustivel;
