@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.luan.cursojava.aula33;
+package exercicios.aula28;
 
 /**
  *
  * @author Luan
  */
-public class TestaCalculadora {
+public class TesteLampada {
     public static void main(String[] args) {
-        MinhaCalculadora minhaCalculadora = new MinhaCalculadora();
+        Lampada lampada = new Lampada();
         
-        minhaCalculadora.soma(1, 2);
-        minhaCalculadora.soma(2.0, 3.0);
+        lampada.setLigada(false);
+        
+        System.out.println("A lampada está ligada? " +lampada.getLigada());
     }
-   
 }
