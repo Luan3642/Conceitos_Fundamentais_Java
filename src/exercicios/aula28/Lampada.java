@@ -10,9 +10,9 @@ package exercicios.aula28;
  * @author Luan
  */
 public class Lampada {
-    public int voltagem;
-    public String modelo;
-    public boolean ligada;
+    private int voltagem;
+    private String modelo;
+    private boolean ligada;
     
     public void setVoltagem(int voltagem){
         this.voltagem = voltagem;
