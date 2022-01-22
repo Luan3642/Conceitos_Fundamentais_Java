@@ -11,13 +11,18 @@ import java.util.Scanner;
  *
  * @author Luan
  */
-public class TestaCalculadora {
+public class Ex {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
         
-        System.out.println(Calculadora.somar(2, 3));
-        System.out.println(Calculadora.potencia(2));
+        Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
-        System.out.println("Fatorial de "+ n +" = "+Calculadora.fatorial(n));
+        
+      int i = 0;
+      int x = n;
+        for ( i = n; i >=2; i--) {
+            x = x * (i-1);
+        }
+        
+        System.out.println(x);
     }
 }
