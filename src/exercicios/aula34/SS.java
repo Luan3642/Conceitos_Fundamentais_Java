@@ -11,18 +11,17 @@ import java.util.Scanner;
  *
  * @author Luan
  */
-public class Ex {
+public class SS {
     public static void main(String[] args) {
-        
         Scanner scan = new Scanner(System.in);
+        
         int n = scan.nextInt();
         
-      int i = 0;
-      int x = n;
-        for ( i = n; i >=2; i--) {
-            x = x * (i-1);
-        }
         
-        System.out.println(x);
+        while (n >=0 && n<=10){
+            System.out.println("Informe nota");
+            n = scan.nextInt();
+        }
+        System.out.println("Nota invalida");
     }
 }
