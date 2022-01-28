@@ -13,6 +13,17 @@ public class Contato {
     private String nome;
     private Endereco endereco;
     private Telefone[] telefones;
+    private String email;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
+    
 
     public String getNome() {
         return nome;
@@ -38,6 +49,9 @@ public class Contato {
         this.telefones = telefones;
     }
 
+    
+
+    
  
 
   
