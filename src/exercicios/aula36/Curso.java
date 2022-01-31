@@ -9,11 +9,13 @@ package exercicios.aula36;
  *
  * @author Luan
  */
-public class Curso {
+public class Curso extends Aluno{
     private String nome;
     private int horario;
     private Professor professor;
     private Aluno[] aluno;
+    
+    
 
     public String getNome() {
         return nome;
