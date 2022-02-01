@@ -10,51 +10,50 @@ package exercicios.aula36;
  * @author Luan
  */
 public class Aluno {
-    
+
     private String nome;
     private String matricula;
-    private int[] notas = new int[2];
-    
+    private double[] notas = new double[4];
+
     public String getNome() {
         return nome;
     }
-    
+
     public void setNome(String nome) {
         this.nome = nome;
     }
-    
+
     public String getMatricula() {
         return matricula;
     }
-    
+
     public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
-    
-    public int[] getNotas() {
+
+    public double[] getNotas() {
         return notas;
     }
-    
-    public void setNotas(int[] notas) {
+
+    public void setNotas(double[] notas) {
         this.notas = notas;
     }
     
-    public void checarNotas() {
-        int media[] = new int[5];
-        int soma = 0;
-        for (int i = 0; i < notas.length; i++) {
-            soma += notas[i];
-            media[i] = soma / 2;
-            
+    public void obterMedia(){
+        double soma = 0;
+        
+        for (double nota : notas) {
+            soma += nota;
         }
-        for (int i : media) {
-            if (media[i] >= 7) {
-                System.out.println("Aprovado");
-            } else {
-                System.out.println("Reprovado");
-            }            
+        
+        double media = soma / 4;
+        
+        if(media >=7){
+            System.out.println("Aprovado");
+        } else{
+            System.out.println("Reprovado");
         }
         
     }
-    
+
 }

@@ -5,47 +5,43 @@
  */
 package exercicios.aula36;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Luan
  */
 public class TesteCurso {
+    
     public static void main(String[] args) {
         Curso curso = new Curso();
+        Scanner scan = new Scanner(System.in);
         
-        
-        
-        Aluno aluno1 = new Aluno();
-        Aluno aluno2 = new Aluno();
-        Aluno aluno3 = new Aluno();
-        Aluno aluno4 = new Aluno();
-        Aluno aluno5 = new Aluno();
-        
-        int[] notasAluno1 = {10,10};
-        int[] notasAluno2 = {10,10};
-        int[] notasAluno3 = {7,7};
-        int[] notasAluno4 = {5,5};
-        int[] notasAluno5 = {6,6};
-         
-        aluno1.setNotas(notasAluno1);
-        aluno2.setNotas(notasAluno2);
-        aluno3.setNotas(notasAluno3);
-        aluno4.setNotas(notasAluno4);
-        aluno5.setNotas(notasAluno5);
-        
+        System.out.println("Alunos");
+        double[] notas = new double[4];
         
         Aluno[] alunos = new Aluno[5];
         
-        alunos[0] = aluno1;
-        alunos[1] = aluno2;
-        alunos[2] = aluno3;
-        alunos[3] = aluno4;
-        alunos[4] = aluno5;
+        for (int i = 0; i < alunos.length; i++) {
+            System.out.println("Entre com o nome do aluno" + (i + 1));
+            String nomeAluno = scan.next();
+            
+            System.out.println("Entre com a matricula do aluno " + (i + 1));
+            String matricula = scan.next();
+            
+            for (int j = 0; j < notas.length; j++) {
+                System.out.println("Entre com a nota " + (j + 1));
+                notas[j] = scan.nextDouble();
+            }
+            Aluno aluno = new Aluno();
+            aluno.setNotas(notas);
+            
+            alunos[i] = aluno;
+        }
         
+        curso.setNotas(notas);
+        curso.obterMedia();
         
-        curso.setAluno(alunos);
-        
-        curso.checarNotas();
         
     }
 }
