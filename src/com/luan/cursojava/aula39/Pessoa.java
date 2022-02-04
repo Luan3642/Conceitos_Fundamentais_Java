@@ -17,7 +17,6 @@ public class Pessoa {
     private String endereco;
     private String telefone;
     private String cpf;
-    public String nomeVisibilidade;
 
     public Pessoa() {
     }
