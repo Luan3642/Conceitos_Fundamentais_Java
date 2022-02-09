@@ -45,5 +45,9 @@ public class ContaBancaria {
         
     }
     
+    public double depositar (double valorDepositar){
+        return saldo + valorDepositar;
+    }
+    
 
 }
