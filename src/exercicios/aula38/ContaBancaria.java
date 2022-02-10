@@ -13,7 +13,7 @@ public class ContaBancaria {
 
     private String nomeCliente;
     private int numConta;
-    private double saldo;
+    public double saldo;
 
     public String getNomeCliente() {
         return nomeCliente;
@@ -41,12 +41,12 @@ public class ContaBancaria {
     
     
     public double sacar(double valorSacar){
-        return saldo > valorSacar ? valorSacar - saldo : saldo - 0;
+        return saldo > valorSacar ?  saldo = this.saldo - valorSacar :  saldo - 0;
         
     }
     
     public double depositar (double valorDepositar){
-        return saldo + valorDepositar;
+        return saldo += valorDepositar;
     }
     
 
