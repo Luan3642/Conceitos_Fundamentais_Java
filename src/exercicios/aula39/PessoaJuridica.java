@@ -9,6 +9,12 @@ package exercicios.aula39;
  *
  * @author Luan
  */
-public class PessoaJuridica extends Contribuintes{
-    
+public class PessoaJuridica extends Contribuintes {
+
+    public void calcular(double rendimento) {
+
+        double imposto = rendimento - (0.1 * rendimento);
+        System.out.println("desconto imposto de renda: " + imposto);
+    }
+
 }
