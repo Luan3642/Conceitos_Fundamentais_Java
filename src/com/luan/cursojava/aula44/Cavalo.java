@@ -5,31 +5,13 @@
  */
 package com.luan.cursojava.aula44;
 
+
 /**
  *
  * @author Luan
  */
-public class Cachorro extends Mamifero implements AnimalDomesticado, AnimalEstimacao{
-    private String tamanho;
-    private String raca;
+public class Cavalo extends Mamifero implements AnimalDomesticado{
 
-    public String getTamanho() {
-        return tamanho;
-    }
-
-    public void setTamanho(String tamanho) {
-        this.tamanho = tamanho;
-    }
-
-    public String getRaca() {
-        return raca;
-    }
-
-    public void setRaca(String raca) {
-        this.raca = raca;
-    }
-    
-    
     @Override
     public String amamentar() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -47,16 +29,6 @@ public class Cachorro extends Mamifero implements AnimalDomesticado, AnimalEstim
 
     @Override
     public void alimentatar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void brincar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void levarPassear() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
