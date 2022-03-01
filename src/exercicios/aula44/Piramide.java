@@ -9,6 +9,13 @@ package exercicios.aula44;
  *
  * @author Luan
  */
-public class Piramide extends Figura3D{
+public class Piramide extends Figura3D implements DimensaoVolumetrica{
+
+    @Override
+    public int calcularVolume(int areaBase, int altura) {
+        return (areaBase * altura ) / 3;
+    }
+
+   
     
 }

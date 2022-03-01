@@ -9,13 +9,6 @@ package exercicios.aula44;
  *
  * @author Luan
  */
-public class Cubo extends Figura3D implements DimensaoVolumetrica{
-
-    @Override
-    public int calcularVolume(int areaBase, int altura) {
-        return areaBase * altura;
-    }
-
-   
-    
+public interface DimensaoSuperficial {
+    void calcularArea();
 }

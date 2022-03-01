@@ -9,6 +9,20 @@ package exercicios.aula44;
  *
  * @author Luan
  */
-public class Cilindro extends Figura3D{
+public class Cilindro extends Figura3D implements DimensaoVolumetrica{
+
+    public int calcularVolume(int areaBase, int altura) {
+        return areaBase * altura;
+    }
+
+    
+
+   
+    
+ 
+ 
+
+
+    
     
 }

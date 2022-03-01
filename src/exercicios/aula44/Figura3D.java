@@ -9,6 +9,11 @@ package exercicios.aula44;
  *
  * @author Luan
  */
-public class Figura3D extends FiguraGeometria{
+public class Figura3D extends FiguraGeometria implements DimensaoSuperficial{
+
+    @Override
+    public void calcularArea() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
