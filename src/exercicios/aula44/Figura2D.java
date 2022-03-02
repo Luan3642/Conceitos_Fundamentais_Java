@@ -13,7 +13,6 @@ public class Figura2D extends FiguraGeometria implements DimensaoSuperficial{
 
     @Override
     public void calcularArea() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

@@ -11,6 +11,28 @@ package exercicios.aula44;
  */
 public class Cilindro extends Figura3D implements DimensaoVolumetrica{
 
+    
+    
+    private int altura;
+    private int raio;
+
+    public int getAltura() {
+        return altura;
+    }
+
+    public void setAltura(int altura) {
+        this.altura = altura;
+    }
+
+    public int getRaio() {
+        return raio;
+    }
+
+    public void setRaio(int raio) {
+        this.raio = raio;
+    }
+    
+    
     public int calcularVolume(int areaBase, int altura) {
         return areaBase * altura;
     }

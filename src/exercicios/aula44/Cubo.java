@@ -10,6 +10,19 @@ package exercicios.aula44;
  * @author Luan
  */
 public class Cubo extends Figura3D implements DimensaoVolumetrica{
+    
+    private int lado;
+
+    public int getLado() {
+        return lado;
+    }
+
+    public void setLado(int lado) {
+        this.lado = lado;
+    }
+    
+    
+    
 
     @Override
     public int calcularVolume(int areaBase, int altura) {

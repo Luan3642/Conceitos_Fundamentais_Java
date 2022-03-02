@@ -10,5 +10,15 @@ package exercicios.aula44;
  * @author Luan
  */
 public class Circulo extends Figura2D{
+    private int raio;
+
+    public int getRaio() {
+        return raio;
+    }
+
+    public void setRaio(int raio) {
+        this.raio = raio;
+    }
+    
     
 }
