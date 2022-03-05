@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.luan.cursojava.aula38;
+package com.luan.cursojava.aula39;
 
 
 
@@ -21,10 +21,7 @@ public class Aluno extends Pessoa {
         this.curso = curso;
     }
     
-    public void verificarAcesso(){
-          super.nomeVisibilidade = "55";
-          this.nomeVisibilidade = "444";
-    }
+  
 
     
     
