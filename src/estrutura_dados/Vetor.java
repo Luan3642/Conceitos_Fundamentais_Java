@@ -38,6 +38,8 @@ public class Vetor {
 //
 //    }
     
+    
+//    Com esse método temos guardado na memória a ultima posição adicionada do elemento
     public boolean adiciona(String elemento)  {
         if(this.tamanho < this.elementos.length){
             this.elementos[this.tamanho] = elemento;
@@ -46,6 +48,9 @@ public class Vetor {
         }
         return false;
     }
+    
+    
+    
     
 
 }
