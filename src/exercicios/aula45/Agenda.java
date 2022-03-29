@@ -12,14 +12,17 @@ package exercicios.aula45;
 public class Agenda {
     
      
-    
-    public void adicionarContato(int quantidade){
-      Contato[] contatos = new Contato[quantidade];  
+    static Contato luan = new Contato();
+    public void adicionarContato(String nome, String telefone){
+        
+        
+        luan.setNome(nome);
+        luan.setTelefone(telefone);
     }
     
     
-    public Contato consultar(){
-        Contato contato = new Contato();
+    public Contato consultar(Contato contato){
+        
         
         return contato;
     }
