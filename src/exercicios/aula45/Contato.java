@@ -12,8 +12,18 @@ package exercicios.aula45;
 public class Contato {
     private String nome;
     private String telefone;
-    private int id;
+    private int id = 0;
+    private String email;
+    private static int contador = 0;
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+ 
     public String getNome() {
         return nome;
     }
@@ -40,12 +50,21 @@ public class Contato {
     
     
     public Contato(){
-        this.id += 1;
+        contador++;
+        id = contador;
     }
 
     @Override
-    public String toString() {
-        return "Contato{" + "nome=" + nome + ", telefone=" + telefone + ", id=" + id + '}';
+    public String toString(){
+        String s = "[";
+         s += "ID: " +id;
+         s += ",  Nome: " +nome ;
+         s += ", telefone: " +telefone ;
+         s += ", Email: " +email ;
+         s += " ]";
+         
+         return s;
+         
     }
     
     
