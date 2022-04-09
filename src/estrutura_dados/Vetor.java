@@ -5,6 +5,8 @@
  */
 package estrutura_dados;
 
+import java.util.Arrays;
+
 /**
  *
  * @author Luan
@@ -31,10 +33,39 @@ public class Vetor {
         return this.tamanho;
     }
     
+    public int top(){
+        return this.vetor[this.tamanho-1];
+    }
+    
     public void listar(){
         for(int v: vetor){
             System.out.println(v);
         }
     }
+
+    @Override
+    public String toString() {
+        StringBuilder s = new StringBuilder();
+        s.append("[");
+        
+        
+        for (int i = 0; i <this.tamanho-1; i++) {
+            s.append(this.vetor[i]);
+            s.append(", ");
+        }
+        
+        if(this.tamanho > 0){
+            s.append(this.vetor[tamanho-1]);
+        }
+        
+        s.append("]");
+        
+        return s.toString();
+    }
+
+    
+    
+    
+    
     
 }

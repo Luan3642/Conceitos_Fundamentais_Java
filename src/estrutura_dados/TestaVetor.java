@@ -12,20 +12,24 @@ package estrutura_dados;
 public class TestaVetor {
 
     public static void main(String[] args) {
-        Vetor vetor = new Vetor(3);
+        Vetor vetor = new Vetor(5);
 
         try{
             vetor.adicionar(5);
-            vetor.adicionar(2);
-            vetor.adicionar(5);
+            vetor.adicionar(6);
+            vetor.adicionar(9);
         } catch (ArrayIndexOutOfBoundsException a) {
             System.out.println("Tamanho excedido");
         }
-
-        vetor.listar();
+        
         
         System.out.println("Quantidade de elementos do vetor: "+vetor.quantidadeElementos());
-
+        System.out.println("Top: "+vetor.top());
+        
+        System.out.println(vetor.toString());
+        
+        
+        
     }
 
 }
