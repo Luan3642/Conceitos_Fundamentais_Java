@@ -11,31 +11,30 @@ package estrutura_dados;
  */
 public class Vetor {
 
-    private String[] elementos;
+    private int[] vetor;
     private int tamanho;
 
     public Vetor(int capacidade) {
-        this.elementos = new String[capacidade];
-        this.tamanho = 0;
+        vetor = new int[capacidade];
     }
-
-    // método ineficiente em termos de processameto
-//   public void adiciona(String elemento){
-//       for (int i = 0; i < this.elementos.length; i++) {
-//           if(this.elementos[i] == null){
-//               this.elementos[i] = elemento;
-//               break;
-//           }
-//       }
-//   }
-    public void adiciona(String elemento) throws Exception  {
-        if (this.tamanho < this.elementos.length) {
-            this.elementos[this.tamanho] = elemento;
-            this.tamanho++;
-        } else{
-            throw new Exception("Vetor já está cheio");
+    
+    public void adicionar(int numero) throws ArrayIndexOutOfBoundsException{
+       if(this.vetor.length > this.tamanho){
+           this.vetor[tamanho] = numero;
+           this.tamanho++;
+       } else{
+           throw new ArrayIndexOutOfBoundsException();
+       }
+    }
+    
+    public  int quantidadeElementos(){
+        return this.tamanho;
+    }
+    
+    public void listar(){
+        for(int v: vetor){
+            System.out.println(v);
         }
-
     }
-
+    
 }
