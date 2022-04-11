@@ -28,7 +28,7 @@ public class TestaVetor {
         
         System.out.println(vetor.toString());
         
-        
+        System.out.println("Elemento da posicao: "+vetor.obterElemento(0));
         
     }
 

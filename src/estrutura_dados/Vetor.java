@@ -62,6 +62,16 @@ public class Vetor {
         
         return s.toString();
     }
+    
+    
+    public int obterElemento(int posicao) throws IllegalArgumentException{
+       if(!(posicao >=0 && posicao < tamanho)){
+           throw new IllegalArgumentException("Posição inválida");
+       } else{
+           return this.vetor[posicao];
+       }
+        
+    }
 
     
     
