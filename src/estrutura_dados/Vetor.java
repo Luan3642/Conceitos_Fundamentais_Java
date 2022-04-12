@@ -72,6 +72,15 @@ public class Vetor {
        }
         
     }
+    
+    public int busca(int elemento){
+        for (int i = 0; i <this.tamanho; i++) {
+            if(vetor[i] == elemento){
+                return i;
+            }
+        }
+        return -1;
+    }
 
     
     
