@@ -13,32 +13,33 @@ import java.util.Arrays;
  */
 public class Vetor {
 
-    private int[] vetor;
+    private String[] vetor;
     private int tamanho;
 
     public Vetor(int capacidade) {
-        vetor = new int[capacidade];
+        vetor = new String[capacidade];
     }
     
-    public void adicionar(int numero) throws ArrayIndexOutOfBoundsException{
+    public boolean adicionar(String elemento) throws ArrayIndexOutOfBoundsException{
        if(this.vetor.length > this.tamanho){
-           this.vetor[tamanho] = numero;
+           this.vetor[tamanho] = elemento;
            this.tamanho++;
        } else{
            throw new ArrayIndexOutOfBoundsException();
        }
+       return true;
     }
     
     public  int quantidadeElementos(){
         return this.tamanho;
     }
     
-    public int top(){
+    public String top(){
         return this.vetor[this.tamanho-1];
     }
     
     public void listar(){
-        for(int v: vetor){
+        for(String v: vetor){
             System.out.println(v);
         }
     }
@@ -64,7 +65,7 @@ public class Vetor {
     }
     
     
-    public int obterElemento(int posicao) throws IllegalArgumentException{
+    public String obterElemento(int posicao) throws IllegalArgumentException{
        if(!(posicao >=0 && posicao < tamanho)){
            throw new IllegalArgumentException("Posição inválida");
        } else{
@@ -73,15 +74,29 @@ public class Vetor {
         
     }
     
-    public int busca(int elemento){
+    public int busca(String elemento){
         for (int i = 0; i <this.tamanho; i++) {
-            if(vetor[i] == elemento){
+            if(vetor[i].equalsIgnoreCase(elemento)){
                 return i;
             }
         }
         return -1;
     }
 
+    public boolean adiciona(int posicao, String elemento ){
+        if(!(posicao >= 0 && posicao <tamanho)){
+            throw new IllegalArgumentException("Posição inválida");
+        }
+        
+        for (int i = this.tamanho-1; i >=posicao; i--) {
+            this.vetor[i+1] = this.vetor[i];
+        }
+        
+        this.vetor[posicao] = elemento;
+        this.tamanho++;
+                
+        return true;
+    }
     
     
     
