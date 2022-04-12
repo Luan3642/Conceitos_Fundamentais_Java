@@ -19,27 +19,27 @@ public class Vetor {
     public Vetor(int capacidade) {
         vetor = new String[capacidade];
     }
-    
-    public boolean adicionar(String elemento) throws ArrayIndexOutOfBoundsException{
-       if(this.vetor.length > this.tamanho){
-           this.vetor[tamanho] = elemento;
-           this.tamanho++;
-       } else{
-           throw new ArrayIndexOutOfBoundsException();
-       }
-       return true;
+
+    public boolean adicionar(String elemento) throws ArrayIndexOutOfBoundsException {
+        if (this.vetor.length > this.tamanho) {
+            this.vetor[tamanho] = elemento;
+            this.tamanho++;
+        } else {
+            throw new ArrayIndexOutOfBoundsException();
+        }
+        return true;
     }
-    
-    public  int quantidadeElementos(){
+
+    public int quantidadeElementos() {
         return this.tamanho;
     }
-    
-    public String top(){
-        return this.vetor[this.tamanho-1];
+
+    public String top() {
+        return this.vetor[this.tamanho - 1];
     }
-    
-    public void listar(){
-        for(String v: vetor){
+
+    public void listar() {
+        for (String v : vetor) {
             System.out.println(v);
         }
     }
@@ -48,58 +48,68 @@ public class Vetor {
     public String toString() {
         StringBuilder s = new StringBuilder();
         s.append("[");
-        
-        
-        for (int i = 0; i <this.tamanho-1; i++) {
+
+        for (int i = 0; i < this.tamanho - 1; i++) {
             s.append(this.vetor[i]);
             s.append(", ");
         }
-        
-        if(this.tamanho > 0){
-            s.append(this.vetor[tamanho-1]);
+
+        if (this.tamanho > 0) {
+            s.append(this.vetor[tamanho - 1]);
         }
-        
+
         s.append("]");
-        
+
         return s.toString();
     }
-    
-    
-    public String obterElemento(int posicao) throws IllegalArgumentException{
-       if(!(posicao >=0 && posicao < tamanho)){
-           throw new IllegalArgumentException("Posição inválida");
-       } else{
-           return this.vetor[posicao];
-       }
-        
+
+    public String obterElemento(int posicao) throws IllegalArgumentException {
+        if (!(posicao >= 0 && posicao < tamanho)) {
+            throw new IllegalArgumentException("Posição inválida");
+        } else {
+            return this.vetor[posicao];
+        }
+
     }
-    
-    public int busca(String elemento){
-        for (int i = 0; i <this.tamanho; i++) {
-            if(vetor[i].equalsIgnoreCase(elemento)){
+
+    public int busca(String elemento) {
+        for (int i = 0; i < this.tamanho; i++) {
+            if (vetor[i].equalsIgnoreCase(elemento)) {
                 return i;
             }
         }
         return -1;
     }
 
-    public boolean adiciona(int posicao, String elemento ){
-        if(!(posicao >= 0 && posicao <tamanho)){
+//    public boolean adiciona(int posicao, String elemento ){
+//        if(!(posicao >= 0 && posicao <tamanho)){
+//            throw new IllegalArgumentException("Posição inválida");
+//        }
+//        
+//        for (int i = this.tamanho-1; i >=posicao; i--) {
+//            this.vetor[i+1] = this.vetor[i];
+//        }
+//        
+//        this.vetor[posicao] = elemento;
+//        this.tamanho++;
+//                
+//        return true;
+//    }
+    // TAMANHO: 
+    // 0 1 2 3 4
+    // B C D - - 
+    public boolean adiciona(int posicao, String elemento) {
+        if (!(posicao >= 0 && posicao < this.tamanho)) {
             throw new IllegalArgumentException("Posição inválida");
         }
+        
+        
         
         for (int i = this.tamanho-1; i >=posicao; i--) {
             this.vetor[i+1] = this.vetor[i];
         }
         
         this.vetor[posicao] = elemento;
-        this.tamanho++;
-                
         return true;
     }
-    
-    
-    
-    
-    
 }
