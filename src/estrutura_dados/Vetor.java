@@ -21,6 +21,7 @@ public class Vetor {
     }
 
     public boolean adicionar(String elemento) throws ArrayIndexOutOfBoundsException {
+        this.aumentaCapacidade();
         if (this.vetor.length > this.tamanho) {
             this.vetor[tamanho] = elemento;
             this.tamanho++;
@@ -103,7 +104,7 @@ public class Vetor {
             throw new IllegalArgumentException("Posição inválida");
         }
         
-        
+        this.aumentaCapacidade();
         
         for (int i = this.tamanho-1; i >=posicao; i--) {
             this.vetor[i+1] = this.vetor[i];
@@ -111,5 +112,17 @@ public class Vetor {
         
         this.vetor[posicao] = elemento;
         return true;
+    }
+    
+    
+    private void aumentaCapacidade(){
+        if (this.tamanho == this.vetor.length){
+           String[] vetorNovo = new String[this.vetor.length * 2]; 
+            for (int i = 0; i <this.vetor.length; i++) {
+                vetorNovo[i] = this.vetor[i];
+            }
+            
+            this.vetor = vetorNovo;
+        }
     }
 }
