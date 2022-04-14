@@ -124,17 +124,23 @@ public class Vetor {
             this.vetor = vetorNovo;
         }
     }
-
-    public void deletar(int posicaoDeletar) {
-        if (!(posicaoDeletar >= 0 && posicaoDeletar <= tamanho)) {
-            throw new IllegalArgumentException("Valor inválida");
-        } else {
-            for (int i = posicaoDeletar; i <this.tamanho-1; i++) {
-                vetor[i] = vetor[i + 1];
-                
+ 
+    // 
+    // A B C D E F
+    // 0 1 2 3 4 5
+    public void deletar(int posicao){
+        if(!(posicao >=0 && posicao < this.tamanho)){
+            throw new IllegalArgumentException("ERRO");
+        }else{
+            for (int i = posicao; i < this.tamanho-1; i++) {
+                //  1 = 2
+                // 2 = 3
+                vetor[i] = vetor[i+1];
+                // C   B  
+                // D   C
             }
             this.tamanho--;
         }
-
+        
     }
 }
