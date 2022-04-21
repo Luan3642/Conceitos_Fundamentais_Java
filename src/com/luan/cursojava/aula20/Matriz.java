@@ -40,6 +40,7 @@ public class Matriz {
             System.out.println("Média do aluno: "+i + " é = "+ (soma/4));
         }
         
+        System.out.println("");
        
         
         
