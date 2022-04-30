@@ -82,6 +82,13 @@ public class Vetor {
         return -1;
     }
 
+    public int metodoRemover(int posicao) {
+        if(!(posicao > this.tamanho && posicao < this.tamanho)){
+            throw new IllegalArgumentException("Erro");
+        }
+        
+    }
+
 //    public boolean adiciona(int posicao, String elemento ){
 //        if(!(posicao >= 0 && posicao <tamanho)){
 //            throw new IllegalArgumentException("Posição inválida");
@@ -124,23 +131,23 @@ public class Vetor {
             this.vetor = vetorNovo;
         }
     }
- 
+
     // 
     // A B C D E F
     // 0 1 2 3 4 5
-    public void deletar(int posicao){
-        if(!(posicao >=0 && posicao < this.tamanho)){
+    public void deletar(int posicao) {
+        if (!(posicao >= 0 && posicao < this.tamanho)) {
             throw new IllegalArgumentException("ERRO");
-        }else{
-            for (int i = posicao; i < this.tamanho-1; i++) {
+        } else {
+            for (int i = posicao; i < this.tamanho - 1; i++) {
                 //  1 = 2
                 // 2 = 3
-                vetor[i] = vetor[i+1];
+                vetor[i] = vetor[i + 1];
                 // C   B  
                 // D   C
             }
             this.tamanho--;
         }
-        
+
     }
 }
