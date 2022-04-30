@@ -31,11 +31,9 @@ public class VetorNew {
     public boolean adicionarElemento(int elemento) {
         if (this.tamanho < this.vetor.length) {
             this.vetor[tamanho] = elemento;
-        } else {
-            return false;
-        }
-
-        return true;
+            this.tamanho++;
+        } 
+        return false;
     }
 
     public int capacidadeVetor() {
@@ -50,6 +48,7 @@ public class VetorNew {
     public String toString() {
         StringBuilder s = new StringBuilder();
         
+        s.append("[");
         for (int i = 0; i <this.tamanho-1; i++) {
             s.append(this.vetor[i]);
             s.append(",");
@@ -61,5 +60,14 @@ public class VetorNew {
         
         s.append("]");
         return s.toString();
+    }
+    
+    
+    public int busca(int posicaoDesejada) throws Exception{
+        if(this.tamanho > posicaoDesejada && posicaoDesejada >=0){
+            return this.vetor[posicaoDesejada];
+        }
+        throw new Exception("Posiçao inválida");
+       
     }
 }

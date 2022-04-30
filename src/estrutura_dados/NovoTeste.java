@@ -14,17 +14,23 @@ import java.util.logging.Logger;
 public class NovoTeste {
 
     public static void main(String[] args) {
-        VetorNew vetorNew = new VetorNew(4);
-
-        vetorNew.adicionarElemento(4);
-        vetorNew.adicionarElemento(2);
-        vetorNew.adicionarElemento(1);
-
-        
-
-        System.out.println(vetorNew);
-        System.out.println("Capacidade: " + vetorNew.capacidadeVetor());
-        System.out.println("Tamanho real: " + vetorNew.tamanhoRealVetor());
+        try {
+            VetorNew vetorNew = new VetorNew(4);
+            
+            vetorNew.adicionarElemento(4);
+            vetorNew.adicionarElemento(2);
+            vetorNew.adicionarElemento(1);
+            
+            
+            
+            System.out.println(vetorNew);
+            System.out.println("Capacidade: " + vetorNew.capacidadeVetor());
+            System.out.println("Tamanho real: " + vetorNew.tamanhoRealVetor());
+            
+            System.out.println("Qual posição que você deseja descobrir o valor? " +vetorNew.busca(-1));
+        } catch (Exception ex) {
+            Logger.getLogger(NovoTeste.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
     }
 }
