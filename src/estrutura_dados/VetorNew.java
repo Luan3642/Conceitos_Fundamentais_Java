@@ -70,4 +70,23 @@ public class VetorNew {
         throw new Exception("Posiçao inválida");
        
     }
+    
+    
+    public boolean elementoExiste(int elemento){
+        for (int i = 0; i <vetor.length; i++) {
+            if(vetor[i] == elemento){
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    
+    public void adicionarElementoQualquerPosicao(int elemento, int posicao){
+        if(!(posicao < this.vetor.length && posicao >=0)){
+            throw new Exception("Posição inválida");
+        }
+        
+        
+    }
 }

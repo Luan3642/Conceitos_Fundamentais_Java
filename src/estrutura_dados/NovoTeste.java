@@ -27,7 +27,9 @@ public class NovoTeste {
             System.out.println("Capacidade: " + vetorNew.capacidadeVetor());
             System.out.println("Tamanho real: " + vetorNew.tamanhoRealVetor());
             
-            System.out.println("Qual posição que você deseja descobrir o valor? " +vetorNew.busca(-1));
+            System.out.println("Qual posição que você deseja descobrir o valor? " +vetorNew.busca(0));
+            
+            System.out.println("Elemento existe? "+ vetorNew.elementoExiste(666));
         } catch (Exception ex) {
             Logger.getLogger(NovoTeste.class.getName()).log(Level.SEVERE, null, ex);
         }
