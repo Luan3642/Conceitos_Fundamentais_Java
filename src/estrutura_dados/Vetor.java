@@ -167,4 +167,15 @@ public class Vetor {
        
        return true;
    }
+   
+   public void aumentarCapacidade(){
+       if(!(this.tamanho == this.vetor.length)){
+           System.out.println("Não precisa aumentar capacidade");
+       }else{
+           String[] vetorNovo = new String[this.vetor.length];
+           for (int i = 0; i < vetor.length; i++) {
+               vetorNovo[i] = vetor[i];
+           }
+       }
+   }
 }
