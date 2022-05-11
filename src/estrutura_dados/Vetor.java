@@ -16,6 +16,16 @@ public class Vetor {
     private String[] vetor;
     private int tamanho;
 
+    public int getTamanho() {
+        return tamanho;
+    }
+
+    public void setTamanho(int tamanho) {
+        this.tamanho = tamanho;
+    }
+    
+    
+
     public Vetor(int capacidade) {
         vetor = new String[capacidade];
     }
@@ -176,6 +186,19 @@ public class Vetor {
            for (int i = 0; i < vetor.length; i++) {
                vetorNovo[i] = vetor[i];
            }
+           this.vetor = vetorNovo;
        }
+   }
+   
+   public void remover(int posicao) throws Exception{
+       
+       if(!(posicao >=0 && posicao <=this.tamanho)){
+           throw new Exception("Posição inválida");
+       }
+       for (int i = posicao; i <this.tamanho-1; i++) {
+           this.vetor[i] = this.vetor[i+1];
+       }
+       
+       this.tamanho--;
    }
 }
