@@ -11,5 +11,7 @@ package estrutura_dados;
 public class TestaLista {
     public static void main(String[] args) {
         Lista<String> vetor = new Lista<String>(1);
+        
+       
     }
 }
