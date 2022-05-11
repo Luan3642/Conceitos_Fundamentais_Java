@@ -82,11 +82,11 @@ public class VetorNew {
     }
     
     
-    public void adicionarElementoQualquerPosicao(int elemento, int posicao){
-        if(!(posicao < this.vetor.length && posicao >=0)){
-            throw new Exception("Posição inválida");
-        }
-        
-        
-    }
+//    public void adicionarElementoQualquerPosicao(int elemento, int posicao){
+//        if(!(posicao < this.vetor.length && posicao >=0)){
+//            throw new Exception("Posição inválida");
+//        }
+//        
+//        
+//    }
 }
