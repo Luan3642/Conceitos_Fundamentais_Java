@@ -10,8 +10,18 @@ package estruturaDadosPilhaListaEtc;
  */
 public class EstruturaEstatica<T> {
 
-    private T[] elementos;
-    private int tamanho;
+    protected T[] elementos;
+    protected int tamanho;
+
+    public int getTamanho() {
+        return tamanho;
+    }
+
+    public void setTamanho(int tamanho) {
+        this.tamanho = tamanho;
+    }
+    
+    
 
     public EstruturaEstatica() {
         this(10);
@@ -32,7 +42,7 @@ public class EstruturaEstatica<T> {
         return false;
     }
 
-    public void aumentaCapacidade() {
+    protected void aumentaCapacidade() {
         if (this.tamanho == this.elementos.length) {
             T[] vetorNovo = (T[]) new String[this.elementos.length * 2];
             for (int i = 0; i < this.elementos.length; i++) {
