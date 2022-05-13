@@ -15,9 +15,11 @@ public class Teste {
        Pilha<Integer> pilha = new Pilha<>();
         
        
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 10; i++) {;
             pilha.empilha(i);
         }
+
+        System.out.println("Vazio? "+pilha.isEmpty());
         
         System.out.println(pilha);
         System.out.println(pilha.getTamanho());

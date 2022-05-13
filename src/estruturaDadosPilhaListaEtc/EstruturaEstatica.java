@@ -22,6 +22,10 @@ public class EstruturaEstatica<T> {
     }
     
     
+    public boolean isEmpty(){
+        return this.getTamanho() == 0 ? true : false;
+    }
+    
 
     public EstruturaEstatica() {
         this(10);
