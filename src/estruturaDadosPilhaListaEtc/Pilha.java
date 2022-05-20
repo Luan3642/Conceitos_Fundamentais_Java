@@ -29,5 +29,13 @@ public class Pilha<T> extends EstruturaEstatica<T> {
     public boolean empty(){
         return tamanho == 0 ? true : false;
     }
+    
+    public T topoPilha(){
+        
+        if(empty()){
+            return null;
+        }
+        return elementos[this.tamanho-1];
+    }
 
 }

@@ -17,10 +17,10 @@ public class Teste {
         
       
         
-//        pilha.empilhar(1);
-//        pilha.empilhar(2);
-//        pilha.empilhar(3);
-//        pilha.empilhar(5);
+        pilha.empilhar(1);
+        pilha.empilhar(2);
+        pilha.empilhar(3);
+        pilha.empilhar(5);
 //        pilha.empilhar(6);
         
         
@@ -28,5 +28,7 @@ public class Teste {
         System.out.println(pilha.getTamanho());
         
         System.out.println("Está vazio? "+pilha.empty());
+        
+        System.out.println("Topo da pilha: "+pilha.topoPilha());
     }
 }
