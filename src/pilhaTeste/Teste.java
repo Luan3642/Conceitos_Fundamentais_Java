@@ -12,17 +12,21 @@ import estruturaDadosPilhaListaEtc.Pilha;
  */
 public class Teste {
     public static void main(String[] args) {
-       Pilha<Integer> pilha = new Pilha<>();
         
-       
-        for (int i = 0; i < 10; i++) {;
-            pilha.empilha(i);
-        }
-
-        System.out.println("Vazio? "+pilha.isEmpty());
+        Pilha<Integer> pilha = new Pilha(4);
+        
+      
+        
+//        pilha.empilhar(1);
+//        pilha.empilhar(2);
+//        pilha.empilhar(3);
+//        pilha.empilhar(5);
+//        pilha.empilhar(6);
+        
         
         System.out.println(pilha);
         System.out.println(pilha.getTamanho());
         
+        System.out.println("Está vazio? "+pilha.empty());
     }
 }
