@@ -30,5 +30,9 @@ public class Teste {
         System.out.println("Está vazio? "+pilha.empty());
         
         System.out.println("Topo da pilha: "+pilha.topoPilha());
+        
+        System.out.println(pilha.desimpilhar());
+        
+        System.out.println(pilha);
     }
 }

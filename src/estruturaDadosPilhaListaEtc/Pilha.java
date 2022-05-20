@@ -19,23 +19,33 @@ public class Pilha<T> extends EstruturaEstatica<T> {
     }
 
     public void empilhar(T elemento) {
-        if(!(tamanho < elementos.length)){
+        if (!(tamanho < elementos.length)) {
             throw new IllegalArgumentException("ERRO");
         }
         this.elementos[tamanho] = elemento;
         this.tamanho++;
     }
-    
-    public boolean empty(){
+
+    public boolean empty() {
         return tamanho == 0 ? true : false;
     }
-    
-    public T topoPilha(){
-        
-        if(empty()){
+
+    public T topoPilha() {
+
+        if (empty()) {
             return null;
         }
-        return elementos[this.tamanho-1];
+        return elementos[this.tamanho - 1];
     }
+
+    public T desimpilhar() {
+
+        
+        T elemento = this.elementos[this.tamanho-1];
+        this.tamanho--;
+        
+        return elemento;
+    }
+    
 
 }
