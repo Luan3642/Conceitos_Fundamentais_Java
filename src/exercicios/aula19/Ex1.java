@@ -1,36 +1,30 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package exercicios.aula19;
 
-
-public class Ex1 {
-    public static void vetores() {
-
+import java.util.Scanner;
+public class Ex1{
+    public static void main(String[] args){
+        
         int[] vetorA = new int[5];
         int[] vetorB = new int[vetorA.length];
-
-        vetorA[0] = 0;
-        vetorA[1] = 1;
-        vetorA[2] = 2;
-        vetorA[3] = 3;
-        vetorA[4] = 4;
-
-        for (int i : vetorA) {
+        
+        Scanner scan = new Scanner(System.in);
+        for (int i = 0; i <vetorA.length; i++) {
+            System.out.println("Informe o valor do vetor A");
+            vetorA[i] = scan.nextInt();
             vetorB[i] = vetorA[i];
         }
-
-        System.out.println("Valores do vetor B");
-
-        for (int i : vetorB) {
-            System.out.println(i);
+        
+        for(int c: vetorA){
+            System.out.println("Vetor A");
+            System.out.println(c);
         }
-
-
-    }
-    public static void main(String[] args) {
-        vetores();
+        System.out.println("");
+        for(int v: vetorB){
+            System.out.println("Vetor B ");
+            System.out.println(v);
+        }
+        
+        
+        
     }
 }
